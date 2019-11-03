@@ -1,11 +1,16 @@
 {
   "name": "zh-lodash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "个人工具库",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "zonghua",
-  "license": "ISC"
+  "author": "tongzonghua <tongzonghua@gmail.com>",
+  "license": "ISC",
+  "respository": {
+    "type": "git",
+    "url": "https://github.com/zonghua2016/zh-lodash.git"
+  },
+  "homepage": "https://github.com/zonghua2016/zh-lodash"
 }
