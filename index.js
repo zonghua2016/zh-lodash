@@ -56,7 +56,7 @@ import {
                 parent[key] = uniqueData.target;
                 continue;
             }
-            // 数据不村子啊，保存数据源，再拷贝数据中对应的引用
+            // 数据不存在，保存数据源，再拷贝数据中对应的引用
             uniqueList.push({
                 source: data,
                 target: res
@@ -92,7 +92,7 @@ import {
         }
         return null;
     }
-    
+
     return {
         log,
         dateNow,
