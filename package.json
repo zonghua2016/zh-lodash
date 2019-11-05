@@ -1,6 +1,6 @@
 {
   "name": "zh-lodash",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "个人工具库",
   "main": "index.js",
   "scripts": {
@@ -12,5 +12,11 @@
     "type": "git",
     "url": "https://github.com/zonghua2016/zh-lodash.git"
   },
-  "homepage": "https://github.com/zonghua2016/zh-lodash"
+  "homepage": "https://github.com/zonghua2016/zh-lodash",
+  "keywords": [
+    "lodash",
+    "js",
+    "commons",
+    "clone"
+  ]
 }
