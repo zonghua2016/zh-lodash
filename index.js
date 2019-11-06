@@ -26,6 +26,14 @@ import {
     let zhTypeOfFunc = type => obj => Object.prototype.toString.call(obj) === `[object ${type}]`;
 
     const isObject = zhTypeOfFunc('Object');
+    //  生成随机函数
+    function random(min, max) {
+        if (max == null) {
+            max = min;
+            min = 0;
+        }
+        return min + Math.floor(Math.random() * (max - min + 1));
+    }
 
     // 深拷贝
     function cloneForce(x) {
@@ -97,6 +105,7 @@ import {
         log,
         dateNow,
         zhTypeOfFunc,
-        cloneForce
+        cloneForce,
+        random
     }
 })
