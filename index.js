@@ -17,7 +17,7 @@ import {
     }
     // 打印日志
     function log(val) {
-        console.log(`${dateNow()}: ${val}`);
+        console.info(`${dateNow()}: ${val}`);
     }
     /**
      * 生成一个判断是否传入 type 数据类型的函数
@@ -100,12 +100,34 @@ import {
         }
         return null;
     }
-
+    /**
+     * 给传入值补充字符到 len 长度
+     * @param {传入值} num 
+     * @param {需要返回字符串的总长度} len 
+     * @param {填充的字符，默认 0}} ch 
+     * @param {调用补充字符的方法，默认 '' (即 padStart)；(dir = 'l')：padStart (dir = 'r'):padEnd; }} dir 
+     */
+    function charPad(n, len, ch = 0, dir = '') {
+        switch (dir) {
+            case 'l':
+                dir = 'left'
+                break;
+            case 'r':
+                dir = 'right'
+                break;
+            default:
+                dir = 'left';
+                break;
+        }
+        let padFunc = dir === 'left' ? 'padStart' : 'padEnd';
+        return (String(n))[padFunc](len, ch);
+    }
     return {
         log,
         dateNow,
         zhTypeOfFunc,
         cloneForce,
-        random
+        random,
+        charPad
     }
 })

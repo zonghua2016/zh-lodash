@@ -21,3 +21,4 @@
 |      zhTypeOfFunc|    type`(Object/Function...)`|生成一个判断是否传入 type 数据类型的函数|
 |      cloneForce  |    obj     |       深拷贝      |
 |      random      |    min, max|       生成 min 到 max 之间的随机数，包含 min 和 max，如果只传一个参数，则默认赋值给 max，min 为0      |
+|      charPad     |    num,len,ch,dir    |       给传入值补充字符到 len 长度|
