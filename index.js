@@ -11,22 +11,34 @@ import {
     }
 })(this ? this : window, function () {
     'use strict';
-    // 获取当前时间
+    /**
+     * 获取当前时间
+     */
     function dateNow() {
         return Date.now();
     }
-    // 打印日志
+
+    /**
+     * 打印日志
+     * @param { String } val 日志内容
+     */
     function log(val) {
         console.info(`${dateNow()}: ${val}`);
     }
+
     /**
      * 生成一个判断是否传入 type 数据类型的函数
-     * @param {类型：Object、Function} type 
+     * @param {Object、Function} type 类型
      */
-    let zhTypeOfFunc = type => obj => Object.prototype.toString.call(obj) === `[object ${type}]`;
+    let zhtypeof = type => obj => Object.prototype.toString.call(obj) === `[object ${type}]`;
 
-    const isObject = zhTypeOfFunc('Object');
-    //  生成随机函数
+    const isObject = zhtypeof('Object');
+
+    /**
+     * 根据范围生成随机数
+     * @param { Number } min 最小值
+     * @param { Number } max 最大值
+     */
     function random(min, max) {
         if (max == null) {
             max = min;
@@ -35,7 +47,10 @@ import {
         return min + Math.floor(Math.random() * (max - min + 1));
     }
 
-    // 深拷贝
+    /**
+     * 深拷贝
+     * @param { Object } x 拷贝对象
+     */
     function cloneForce(x) {
         // 浅拷贝
         if (!isObject(x)) return x;
@@ -88,8 +103,8 @@ import {
     }
     /**
      * 查询数组中是否包含某项
-     * @param {查询数组}} arr 
-     * @param {查询项} item 
+     * @param { Array } arr 查询数组
+     * @param { String | Number ... } item 查询项
      */
     function find(arr, item) {
         for (let i = 0; i < arr.length; i++) {
@@ -102,10 +117,10 @@ import {
     }
     /**
      * 给传入值补充字符到 len 长度
-     * @param {传入值} num 
-     * @param {需要返回字符串的总长度} len 
-     * @param {填充的字符，默认 0}} ch 
-     * @param {调用补充字符的方法，默认 '' (即 padStart)；(dir = 'l')：padStart (dir = 'r'):padEnd; }} dir 
+     * @param { Number | String } n 传入值
+     * @param { Number } len 需要返回字符串的总长度
+     * @param { Number | String } ch 填充的字符，默认 0
+     * @param { String } dir 调用补充字符的方法，默认 '' (即 padStart)；(dir = 'l')：padStart (dir = 'r'):padEnd; 
      */
     function charPad(n, len, ch = 0, dir = '') {
         switch (dir) {
